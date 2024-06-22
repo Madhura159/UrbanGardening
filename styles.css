@@ -1,0 +1,440 @@
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+header {
+    padding: 10px 0;
+    color: white;
+}
+.logo img {
+    max-height: 70px; 
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+}
+
+.nav-links li {
+    margin: 0 10px;
+}
+
+.nav-links a {
+    color: black;
+    text-decoration: none;
+}
+
+.nav-links a:hover {
+    color: #5ab563;
+}
+
+.hero {
+    height: 100vh;
+    background: url('https://images.unsplash.com/photo-1621076910703-26c6e6177d8f?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NDd8fGdhcmRlbmluZ3xlbnwwfHwwfHx8MA%3D%3D') no-repeat center center/cover;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    text-align: center;
+}
+
+.hero h1 {
+    font-size: 3em;
+    margin: 0;
+    opacity: 0;
+    animation: fadeIn 2s forwards;
+}
+
+.hero p {
+    font-size: 1.5em;
+    margin: 10px 0 0;
+    opacity: 0;
+    animation: fadeIn 2s 1s forwards;
+}
+
+@keyframes fadeIn {
+    to {
+        opacity: 1;
+    }
+}
+
+/* About Section */
+.about {
+    padding: 50px 20px;
+    text-align: center;
+    color: #28a745;
+}
+
+.about-content {
+    padding: 50px;
+    background-color: #f9f9f9;
+}
+
+.about-content h2,
+.about-content h3 {
+    color: #28a745;
+    text-align: center;
+}
+
+/* Services Section */
+.services {
+    padding: 50px 20px;
+    text-align: center;
+    background: #50cf58b4;
+}
+
+.services-grid {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.service-item {
+    background: #f0f0f0;
+    padding: 20px;
+    flex: 1 1 200px;
+    margin: 10px;
+    transition: transform 0.3s, background 0.3s;
+    cursor: pointer;
+}
+
+.service-item:hover {
+    transform: translateY(-10px);
+    background: #e0e0e0;
+}
+
+.service-details {
+    display: none;
+    margin-top: 30px;
+    text-align: left;
+}
+
+/* Contact Section */
+.contact {
+    padding: 50px 20px;
+    text-align: center;
+}
+
+.contact form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.contact label, .contact input, .contact textarea, .contact button {
+    width: 100%;
+    max-width: 500px;
+    margin: 10px 0;
+}
+
+.contact button {
+    background: #4CAF50;
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.contact button:hover {
+    background: #45a049;
+}
+
+.contact-form h2, .newsletter-form h2 {
+    margin-bottom: 50px;
+}
+
+.contact-form label, .newsletter-form label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+.contact-form input, .contact-form textarea, .newsletter-form input {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    box-sizing: border-box;
+}
+
+.contact-form button, .newsletter-form button {
+    background-color: #28a745;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.contact-form button:hover, .newsletter-form button:hover {
+    background-color: #155724;
+}
+
+.contact-form, .newsletter-form {
+    background-color: #f9f9f9;
+    padding: 30px;
+    margin: 30px;
+    border-radius: 5px;
+    width: 100%;
+    max-width: 600px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.footer {
+    background: black;
+    color: white;
+    text-align: center;
+    padding: 20px;
+}
+
+.faq-section {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 40px;
+    text-align: left;
+}
+
+.faq h2 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.faq {
+    margin-bottom: 20px;
+}
+
+.faq-question {
+    width: 100%;
+    background: #28a745;
+    color: white;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    text-align: left;
+    font-size: 16px;
+    transition: background 0.3s;
+}
+
+.faq-question:hover {
+    background: #155724;
+}
+
+.faq-answer {
+    display: none;
+    padding: 10px;
+    border-left: 2px solid #28a745;
+    margin-top: 5px;
+    background: #f9f9f9;
+    border-radius: 5px;
+}
+
+/* Gallery Section */
+.gallery {
+    padding: 10px 10px;
+    text-align: center;
+}
+
+/* Slider Section */
+.slider {
+    position: relative;
+    max-width: 600px;
+    margin: auto;
+    overflow: hidden;
+    height: 650px; 
+}
+
+.slides {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+}
+
+.slide {
+    min-width: 100%;
+    transition: opacity 0.5s;
+}
+
+.prev, .next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+}
+
+.prev {
+    left: 10px;
+}
+
+.next {
+    right: 10px;
+}
+
+/* Newsletter Section */
+.newsletter {
+    padding: 50px 20px;
+    text-align: center;
+}
+
+.newsletter form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.newsletter label, .newsletter input, .newsletter button {
+    width: 100%;
+    max-width: 500px;
+    margin: 10px 0;
+}
+
+.newsletter button {
+    background: #4CAF50;
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.newsletter button:hover {
+    background: #45a049;
+}
+
+/* Blog Section */
+.blog {
+    padding: 50px 20px;
+    background: #50cf58b4;
+}
+
+.blog h2 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.blog h3 {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.blog ul {
+    list-style: disc inside;
+    margin: 10px 0 20px 20px;
+}
+
+.blog ul li {
+    margin-bottom: 10px;
+}
+
+.blog-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 20px;
+}
+
+.blog-post {
+    background: white;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.blog-post h3 {
+    color: #28a745;
+}
+
+.blog-post p {
+    margin: 15px 0;
+}
+
+.blog-post a {
+    color: #28a745;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.blog-post a:hover {
+    text-decoration: underline;
+}
+/* Blog Post Content */
+.blog-post-content {
+    padding: 50px;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.blog-post-content h1 {
+    color: #28a745;
+    margin-bottom: 20px;
+}
+
+.blog-post-content img {
+    width: 50%;
+    height: auto;
+    margin-bottom: 20px;
+}
+
+.blog-post-content p {
+    margin-bottom: 20px;
+    line-height: 1.6;
+}
+
+.blog-post-content h2 {
+    color: #28a745;
+    margin-top: 40px;
+    margin-bottom: 20px;
+}
+
+.blog-post-content h3 {
+    color: #28a745;
+    margin-top: 30px;
+    margin-bottom: 10px;
+}
+
+.blog-post-content ul {
+    list-style-type: disc;
+    margin-left: 20px;
+    margin-bottom: 20px;
+}
+
+.blog-post-content ul li {
+    margin-bottom: 10px;
+}
+.blog-post img {
+    width: 50%;
+    height: 40;
+    margin-bottom: 20px;
+}
+.blog-post-content {
+    padding: 50px;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.full-post {
+    display: none; /* Hide full posts by default */
+}
+
+/* Navbar Hover Effect */
+.nav-links li a:hover {
+    color: #28a745;
+}
